@@ -1,0 +1,3 @@
+[submodule "React-Ecosystems"]
+	path = React-Ecosystems
+	url = https://github.com/jyassien/ReactRedux.git
