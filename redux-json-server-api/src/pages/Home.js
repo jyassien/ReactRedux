@@ -45,6 +45,7 @@ const rows = [
 
 function Home() {
   const dispatch = useDispatch();
+  const { users } = useSelector((state) => state.users);
 
   useEffect(() => {
     dispatch(loadUsers());
@@ -56,19 +57,18 @@ function Home() {
           <TableRow>
             <StyledTableCell>Name</StyledTableCell>
             <StyledTableCell align="right">City</StyledTableCell>
-            <StyledTableCell align="right">Contact</StyledTableCell>
             <StyledTableCell align="right">Email</StyledTableCell>
           </TableRow>
         </TableHead>
+        <p>oo {users}</p>
         <TableBody>
-          {rows.map((row) => (
-            <StyledTableRow key={row.name}>
+          {users.map((user) => (
+            <StyledTableRow key={user.name}>
               <StyledTableCell component="th" scope="row">
-                {row.name}
+                {user.name}
               </StyledTableCell>
-              <StyledTableCell align="right">{row.calories}</StyledTableCell>
-              <StyledTableCell align="right">{row.fat}</StyledTableCell>
-              <StyledTableCell align="right">{row.carbs}</StyledTableCell>
+              <StyledTableCell align="right">{user.city}</StyledTableCell>
+              <StyledTableCell align="right">{user.email}</StyledTableCell>
             </StyledTableRow>
           ))}
         </TableBody>

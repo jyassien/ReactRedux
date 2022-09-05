@@ -2,18 +2,22 @@
   "users": [
     {
       "name": "Harry Potter",
+      "email": "Harry@Potter",
       "city": "London"
     },
     {
       "name": "Don Quixote",
+      "email": "Don@uixote",
       "city": "Madrid"
     },
     {
       "name": "Joan of Arc",
+      "email": "Joa@ofArc",
       "city": "Paris"
     },
     {
       "name": "Rosa Park",
+      "email": "Ros@Park",
       "city": "Alabama"
     }
   ]
