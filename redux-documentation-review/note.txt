@@ -11,6 +11,8 @@ automatically, and the reducer code is shorter and easier to understand.
 
  > configureStore  : sets up the store.
  > createSlice     : creates reducers. (name, initial state, reducer functions)
+                    - takes care of the work of generating action type strings,
+                    - action creator functions, and action objects. 
  > 
 
 Packages
@@ -19,8 +21,25 @@ Packages
 - react-redux   {Provider, useSelector, useDispatch }
 
 /////////////////////
-Store :- 
+
+Redux :- is a pattern and library for managing and updating application state,
+using events called "actions". It serves as a centralized store for state
+that needs to be used across your entire application, with rules ensuring that 
+the state can only be updated in a predictable fashion.
+
+Redux helps you manage "global" state - state that is needed across many 
+parts of your application.
+a single centralized place to contain the global state in your application, and 
+specific patterns to follow when updating that state to make the code predictable.
+
+State :- describes the condition of the app at a specific point in time.
+
+Store :- The current Redux application state lives in an object called the store .
 
 Action :- An action is a plain JavaScript object that describes what happened.
+    action = {type: "", payload: " "}
+    type :- descriptive name to what happened.
+    payload :- additional information.
 
-Reducer :- it’s just a function that takes state and action as arguments, and returns the next state of the app.
+Reducer :- it’s just a function that takes state and action as arguments, and 
+            returns the next state of the app.
