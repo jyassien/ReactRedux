@@ -1,0 +1,26 @@
+Redux Core API
+ > createStore
+ > combineReducers
+ > applyMiddleware
+ > compose
+
+Redux Toolkit API :
+simplifys standard Redux tasks.(automatic reducers, middlware, devtools, redux-thunk)
+All of the action creators and action types are generated 
+automatically, and the reducer code is shorter and easier to understand. 
+
+ > configureStore  : sets up the store.
+ > createSlice     : creates reducers. (name, initial state, reducer functions)
+ > 
+
+Packages
+- @reduxjs/toolkit  {configureStore, createSlice, createReducer, }
+- redux > is obsolete and should be avoided.
+- react-redux   {Provider, useSelector, useDispatch }
+
+/////////////////////
+Store :- 
+
+Action :- An action is a plain JavaScript object that describes what happened.
+
+Reducer :- it’s just a function that takes state and action as arguments, and returns the next state of the app.
