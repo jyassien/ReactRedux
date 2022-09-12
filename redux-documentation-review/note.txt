@@ -9,7 +9,7 @@ simplifys standard Redux tasks.(automatic reducers, middlware, devtools, redux-t
 All of the action creators and action types are generated 
 automatically, and the reducer code is shorter and easier to understand. 
 
- > configureStore  : sets up the store.
+ > configureStore  : sets up the store. (automatic middlware, thunk, and test checks)
  > createSlice     : creates reducers. (name, initial state, reducer functions)
                     - takes care of the work of generating action type strings,
                     - action creator functions, and action objects. 
