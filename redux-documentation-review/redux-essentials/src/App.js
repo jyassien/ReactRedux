@@ -1,24 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
+
+import { useSelector, useDispatch } from "react-redux";
+import { Navbar } from "./app/Navbar";
+import { PostsList } from "./features/PostsList";
+import { AddPostForm } from "./features/AddPostForm";
 
 function App() {
+  const posts = useSelector((state) => state.posts);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* <div>
+        here:
+        {posts.map((post) => (
+          <div key={post.id}>
+            <p>{post.title}</p>
+            <p> ::{post.content}</p>
+          </div>
+        ))}
+      </div> */}
+      <Navbar />
+
+      {/* <PostsList /> */}
+      <div className="App">
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <section>
+                  <h2>Welcome to the Redux Essentials example app!</h2>
+                  <AddPostForm />
+                  <PostsList />
+                </section>
+              </>
+            }
+            render={() => (
+              <React.Fragment>
+                <PostsList />
+              </React.Fragment>
+            )}
+          />
+          {/* <Navigate to="/" /> */}
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
