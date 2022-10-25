@@ -4,7 +4,6 @@ let lastId = 0;
 
 export default function reducer(state = [], action) {
   //  using switch statement.
-  
   switch (action.type) {
     case BUG_ADDED:
       return [
